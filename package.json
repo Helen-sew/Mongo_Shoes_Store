@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "jest",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "reseed": "mongoimport --jsonArray --db homework --collection shoeshop --drop --file ./db/seed/shoes.json"
   },
   "keywords": [],
