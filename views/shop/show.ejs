@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+	<body>
+        <div class='btn-top'>
+        <a href="/shoes"><button class="btn btn-secondary btn-lg" type="submit">ALL PRODUCTS</button></a>
+        <span class='span'></span>
+    	<form action="/shoes/<%= item.name%>?_method=DELETE" method="POST">
+            <button class="btn btn-secondary btn-lg" type="submit">DELETE PRODUCT</button>
+        </form>
+        <span class='span'></span>
+        <a href="/shoes/<%= item.name%>/edit"><button class="btn btn-secondary btn-lg" type="submit">EDIT PRODUCT</button></a>    
+        </div>
+
+
+        <div class="card">
+
+            <%let availableQty = item.qty;%>
+            <%console.log(availableQty)%>
+         
+            <%if(availableQty > 0){%>
+                <h2><%=`Qty in stock: ${availableQty}`%></h2>   
+            <%} else { %>
+                <h2><%= `Out of stock` %></h2>
+            <%}%>
+            
+            <img src="<%=item.img%>" style="width:100%">
+            <h1><%= item.name %></h1>
+            <p class="price"></p> <%=`S$ ${item.price}`%></p>
+            <p><%= item.description%></p>
+            
+             <p><button class="buyButton">BUY</button></p>
+            
+          </div>
+
+        
+		 
+		
+	</body>
+</html>
