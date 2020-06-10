@@ -1,7 +1,7 @@
 {
   "name": "Mongo_Shoes_Store",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mongo Shoes Store",
   "main": "routes.js",
   "dependencies": {
     "chai": "^4.2.0",
