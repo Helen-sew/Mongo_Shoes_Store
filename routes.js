@@ -1,6 +1,8 @@
 const shopController = require('./controllers/shopController');
 
 module.exports = app => {
+    app.get('/', shopController.redirect);
+
     app.get('/shoes', shopController.getAll);
 
     // get the create form api

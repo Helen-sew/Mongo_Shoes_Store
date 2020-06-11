@@ -1,6 +1,10 @@
 const shopRepository = require('../repositories/shopRepository');
 
 module.exports = {
+    async redirect (req, res) {
+        await res.redirect('/shoes')
+    },
+
     async getAll (req, res) {
         const items = await shopRepository.getAll();
         return res.render('shop/index', { items });
