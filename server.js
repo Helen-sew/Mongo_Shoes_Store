@@ -13,7 +13,9 @@ app.use(express.urlencoded({ extended:true }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-db.connect();
+db.connect().then( ()=> {
+    console.log('database is connected');
+});
 
 //router 
 require('./routes')(app);
