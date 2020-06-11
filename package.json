@@ -19,7 +19,9 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "reseed": "mongoimport --jsonArray --db homework --collection shoeshop --drop --file ./db/seed/shoes.json"
+    "reseed": "mongoimport --jsonArray --db homework --collection shoeshop --drop --file ./db/seed/shoes.json",
+    "build": "grunt dist",
+    "postinstall": "./node_modules/bower/bin/bower install && npm run build"
   },
   "keywords": [],
   "author": "",
